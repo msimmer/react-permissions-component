@@ -4,7 +4,6 @@ import Adapter from 'enzyme-adapter-react-16'
 import { configure } from 'enzyme'
 import { mount } from 'enzyme'
 import toJSON from 'enzyme-to-json'
-// import { expect } from 'chai'
 import Permit from './Permit'
 
 configure({ adapter: new Adapter() })

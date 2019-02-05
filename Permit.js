@@ -1,6 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { permissionsPropType } from './prop-types'
 
 class Permit extends React.Component {
+  static defaultProps = {
+    permissions: 644,
+    roles: { admin: 0, editor: 1, guest: 2 },
+    role: 'editor',
+  }
+
   getPermissions = () => {
     const { permissions } = this.props
     const [u, g, o] = String(permissions)
@@ -36,8 +44,8 @@ class Permit extends React.Component {
       ? React.cloneElement(this.props.children)
       : null
 
-  content = ({ editable, viewable, executable }) => {
-    return this.props.children
+  content = ({ editable, viewable, executable }) =>
+    this.props.children
       ? this.children()
       : this.executable() && executable
       ? React.cloneElement(executable)
@@ -46,9 +54,21 @@ class Permit extends React.Component {
       : this.viewable() && viewable
       ? React.cloneElement(viewable)
       : null
-  }
 
   render = () => <React.Fragment>{this.content(this.props)}</React.Fragment>
+}
+
+Permit.propTypes = {
+  permissions: permissionsPropType.isRequired,
+  roles: PropTypes.shape({
+    admin: PropTypes.number.isRequired,
+    editor: PropTypes.number.isRequired,
+    guest: PropTypes.number.isRequired,
+  }).isRequired,
+  role: PropTypes.oneOf(['admin', 'editor', 'guest']).isRequired,
+  executable: PropTypes.node,
+  editable: PropTypes.node,
+  viewable: PropTypes.node,
 }
 
 export default Permit

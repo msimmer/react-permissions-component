@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the children 1`] = `
+<Permit
+  permissions={600}
+  role="admin"
+  roles={
+    Object {
+      "admin": 0,
+      "editor": 1,
+      "guest": 2,
+    }
+  }
+>
+  <span>
+    Hello Admin!
+  </span>
+</Permit>
+`;
+
+exports[`Renders the children 2`] = `
+<Permit
+  permissions={600}
+  role="editor"
+  roles={
+    Object {
+      "admin": 0,
+      "editor": 1,
+      "guest": 2,
+    }
+  }
+/>
+`;
+
+exports[`Renders the children 3`] = `
+<Permit
+  permissions={600}
+  role="guest"
+  roles={
+    Object {
+      "admin": 0,
+      "editor": 1,
+      "guest": 2,
+    }
+  }
+/>
+`;
+
+exports[`Renders the components passed in props 1`] = `
+<Permit
+  editable={<Editable />}
+  executable={<Executable />}
+  permissions={744}
+  role="admin"
+  roles={
+    Object {
+      "admin": 0,
+      "editor": 1,
+      "guest": 2,
+    }
+  }
+  viewable={<Viewable />}
+>
+  <Executable>
+    <form>
+      <input
+        type="text"
+      />
+      <button
+        value="save"
+      />
+      <button
+        value="delete"
+      />
+    </form>
+  </Executable>
+</Permit>
+`;
+
+exports[`Renders the components passed in props 2`] = `
+<Permit
+  editable={<Editable />}
+  executable={<Executable />}
+  permissions={744}
+  role="editor"
+  roles={
+    Object {
+      "admin": 0,
+      "editor": 1,
+      "guest": 2,
+    }
+  }
+  viewable={<Viewable />}
+>
+  <Viewable>
+    <form>
+      <input
+        readOnly={true}
+        type="text"
+      />
+    </form>
+  </Viewable>
+</Permit>
+`;
+
+exports[`Renders the components passed in props 3`] = `
+<Permit
+  editable={<Editable />}
+  executable={<Executable />}
+  permissions={744}
+  role="guest"
+  roles={
+    Object {
+      "admin": 0,
+      "editor": 1,
+      "guest": 2,
+    }
+  }
+  viewable={<Viewable />}
+>
+  <Viewable>
+    <form>
+      <input
+        readOnly={true}
+        type="text"
+      />
+    </form>
+  </Viewable>
+</Permit>
+`;

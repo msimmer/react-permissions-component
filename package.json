@@ -1,7 +1,7 @@
 {
-  "name": "react-permit-component",
+  "name": "react-permissions-component",
   "version": "0.0.1",
-  "description": "A *nix Style Permissions Model React Component",
+  "description": "A proof of concept for using a *nix style permissions model in React Components",
   "main": "Permit.js",
   "scripts": {
     "test": "jest"

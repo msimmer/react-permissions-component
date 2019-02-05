@@ -4,8 +4,8 @@ import Adapter from 'enzyme-adapter-react-16'
 import { configure } from 'enzyme'
 import { shallow } from 'enzyme'
 import toJSON from 'enzyme-to-json'
-import Permit from './Permit'
-import withPermission from './withPermission'
+import Permit from '../Permit'
+import withPermission from '../withPermission'
 
 configure({ adapter: new Adapter() })
 

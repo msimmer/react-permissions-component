@@ -4,7 +4,9 @@
   "description": "A proof of concept for using a *nix style permissions model in React Components",
   "main": "Permit.js",
   "scripts": {
-    "test": "jest"
+    "test": "npm run flow && npm run jest",
+    "jest": "jest",
+    "flow": "flow"
   },
   "keywords": [],
   "author": "Maxwell Simmer <maxwell.simmer@gmail.com> (http://maxwellsimmer.com)",
@@ -12,7 +14,9 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^24.0.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.0",
@@ -20,7 +24,10 @@
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-config-prettier-standard": "^2.0.0",
+    "eslint-plugin-flowtype": "^3.4.2",
     "eslint-plugin-prettier": "^3.0.1",
+    "flow-bin": "^0.93.0",
+    "flow-typed": "^2.5.1",
     "jest": "^24.0.0",
     "prettier": "^1.16.4",
     "react-test-renderer": "^16.7.0"

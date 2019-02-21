@@ -44,9 +44,9 @@ test('Parses the props', () => {
   )
 
   expect(component.instance().getPermissions()).toEqual([
-    (6).toString(2).padStart('3', '0'),
-    (4).toString(2).padStart('3', '0'),
-    (0).toString(2).padStart('3', '0'),
+    (6).toString(2).padStart(3, '0'),
+    (4).toString(2).padStart(3, '0'),
+    (0).toString(2).padStart(3, '0'),
   ])
   expect(component.instance().getRole()).toEqual(0)
   expect(component.instance().getAccess()).toEqual({ r: 1, w: 1, x: 0 })
@@ -55,9 +55,9 @@ test('Parses the props', () => {
   component.setProps({ permissions: 740 })
 
   expect(component.instance().getPermissions()).toEqual([
-    (7).toString(2).padStart('3', '0'),
-    (4).toString(2).padStart('3', '0'),
-    (0).toString(2).padStart('3', '0'),
+    (7).toString(2).padStart(3, '0'),
+    (4).toString(2).padStart(3, '0'),
+    (0).toString(2).padStart(3, '0'),
   ])
   expect(component.instance().getRole()).toEqual(1)
   expect(component.instance().getAccess()).toEqual({ r: 1, w: 0, x: 0 })
